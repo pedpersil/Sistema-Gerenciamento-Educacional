@@ -1,15 +1,17 @@
 # Sistema-Gerenciamento-Educacional
 Sistema de Gerenciamento Educacional foi criado para administrar dados de instituições de ensino como professores, alunos, cursos, disciplinas e notas.
 
-## Demo on-line <a href="https://pedrosilva.tech/sistema-gerenciamento-educacional/">Click Aqui.</a>
+# Demo on-line <a href="https://pedrosilva.tech/sistema-gerenciamento-educacional/">Click Aqui.</a>
 
 Usuário para a parte administrativa:<br>
 Como administrador você pode adicionar/editar/excluir cursos, disciplinas, docentes e discentes. <br>
+
 Usuário: admin@test.com<br>
 Senha: 123456<br>
 
 Usuários para a o perfil do professor:<br>
 Como professor você pode exibir as disciplinas que ele é regente, exibir os alunos matriculados nessas disciplinas e adicionar/editar/excluir notas. <br>
+
 Usuário: professor@test.com <br>
 Senha: 123456<br>
 
@@ -21,7 +23,8 @@ Senha: 123456<br>
 
 
 Usuários para o perfil do aluno:<br>
-- Como aluno você pode exibir os seus dados e notas.<br>
+Como aluno você pode exibir os seus dados e notas.<br>
+
 Usuário: lucas.andrade@email.com<br>
 Senha: 123456<br>
 
