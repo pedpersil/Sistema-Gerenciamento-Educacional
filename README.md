@@ -3,38 +3,38 @@ Sistema de Gerenciamento Educacional foi criado para administrar dados de instit
 
 ## Demo on-line <a href="https://pedrosilva.tech/sistema-gerenciamento-educacional/">Click Aqui.</a>
 
-### Usuário para a parte administrativa:
+Usuário para a parte administrativa:<br>
 Como administrador você pode adicionar/editar/excluir cursos, disciplinas, docentes e discentes. <br>
-Usuário: admin@test.com
-Senha: 123456
+Usuário: admin@test.com<br>
+Senha: 123456<br>
 
-### Usuários para a o perfil do professor:
-- Como professor você pode exibir as disciplinas que ele é regente, exibir os alunos matriculados nessas disciplinas e adicionar/editar/excluir notas. <br>
+Usuários para a o perfil do professor:<br>
+Como professor você pode exibir as disciplinas que ele é regente, exibir os alunos matriculados nessas disciplinas e adicionar/editar/excluir notas. <br>
 Usuário: professor@test.com <br>
-Senha: 123456
+Senha: 123456<br>
 
 Usuário: joao.silva@educacao.com <br>
-Senha: 123456
+Senha: 123456<br>
 
 Usuário: maria.oliveira@educacao.com <br>
-Senha: 123456
+Senha: 123456<br>
 
 
-### Usuários para o perfil do aluno:
+Usuários para o perfil do aluno:<br>
 - Como aluno você pode exibir os seus dados e notas.<br>
 Usuário: lucas.andrade@email.com<br>
 Senha: 123456<br>
 
 Usuário: mariana.souza@email.com<br>
-Senha: 123456
+Senha: 123456<br>
 
 Usuário: rafael.lima@email.com<br>
 Senha: 123456<br>
 
-# Requisitos
-Servidor Web como Apache ou o Nginx, O php 8+, Mysql, PHPMyAdmin.
+# Requisitos<br>
+Servidor Web como Apache ou o Nginx, O php 8+, Mysql, PHPMyAdmin.<br>
 
-# 1 - Para instalar você precisa configurar os atributos no arquivo config.php que está na pasta includes
+# 1 - Para instalar você precisa configurar os atributos no arquivo config.php que está na pasta includes<br>
 
 define('DB_HOST', 'mysql');<br>
 define('DB_NAME', 'gerenciamento_educacional'); // Nome da database<br>
@@ -105,8 +105,8 @@ CREATE TABLE course_disciplines (<br>
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,<br>
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,<br>
 
-    FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE,<br>
-    FOREIGN KEY (teacher_id) REFERENCES teachers(id) ON DELETE CASCADE<br>
+    FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE,
+    FOREIGN KEY (teacher_id) REFERENCES teachers(id) ON DELETE CASCADE
 );<br>
 
 CREATE TABLE college_enrollment (<br>
@@ -121,13 +121,13 @@ CREATE TABLE college_enrollment (<br>
     final_average FLOAT GENERATED ALWAYS AS ((grade1 + grade2 + grade3 + grade4) / 4) STORED,<br>
     enrollment_date DATE NOT NULL DEFAULT (CURRENT_DATE),<br>
 
-    CONSTRAINT fk_student FOREIGN KEY (student_id) REFERENCES students(id) ON DELETE CASCADE,<br>
-    CONSTRAINT fk_course FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE,<br>
-    CONSTRAINT fk_discipline FOREIGN KEY (discipline_id) REFERENCES course_disciplines(id) ON DELETE CASCADE,<br>
+    CONSTRAINT fk_student FOREIGN KEY (student_id) REFERENCES students(id) ON DELETE CASCADE,
+    CONSTRAINT fk_course FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE,
+    CONSTRAINT fk_discipline FOREIGN KEY (discipline_id) REFERENCES course_disciplines(id) ON DELETE CASCADE,
 
-    INDEX idx_student (student_id),<br>
-    INDEX idx_course (course_id),<br>
-    INDEX idx_discipline (discipline_id)<br>
+    INDEX idx_student (student_id),
+    INDEX idx_course (course_id),
+    INDEX idx_discipline (discipline_id)
 );<br>
 
 CREATE TABLE events (<br>
@@ -141,9 +141,9 @@ CREATE TABLE events (<br>
 
 # 3 - Fazer o upload dos arquivos para o seu servidor.<br>
 
-# 4 - Como funciona.
-1 - Na parte administrativa crie os cursos, crie os docentes, depois crie as disciplinas, depois crie os discentes, depois de criar os discentes os edite adicionando as disciplinas que ele está matriculado.
+# 4 - Como funciona.<br>
+1 - Na parte administrativa crie os cursos, crie os docentes, depois crie as disciplinas, depois crie os discentes, depois de criar os discentes os edite adicionando as disciplinas que ele está matriculado.<br>
 
-2 - No perfil do docente você pode exibir as disciplinas vinculadas e editar as notas dos discentes matriculados nas disciplinas.
+2 - No perfil do docente você pode exibir as disciplinas vinculadas e editar as notas dos discentes matriculados nas disciplinas.<br>
 
-3 - No perfil do discente você pode exibir os dados e suas notas.
+3 - No perfil do discente você pode exibir os dados e suas notas.<br>
