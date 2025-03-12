@@ -1,4 +1,4 @@
-# Sistema-Gerenciamento-Educacional
+# Sistema de Gerenciamento Educacional
 Sistema de Gerenciamento Educacional foi criado para administrar dados de instituições de ensino como professores, alunos, cursos, disciplinas e notas.
 
 # Demo on-line <a href="https://pedrosilva.tech/sistema-gerenciamento-educacional/">Click Aqui.</a>
